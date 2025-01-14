@@ -1,6 +1,6 @@
 # FaceRocognitionAttendanceSystem
 
-A Python-based real-time facial recognition that marks attendance using a webcam
+A Python-based real-time facial recognition that marks attendance using a webcam.
 
 # What I Learned
 
