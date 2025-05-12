@@ -67,11 +67,13 @@ while True:
         # If find matches, display on webcam
         if matches[matchIndex]:
             name = classNames[matchIndex].upper()
+            # Calculate similarity percentage with adjusted formula
+            similarity = max(0, min(100, (1 - faceDis[matchIndex]) * 200))
             y1, x2, y2, x1 = faceLoc
             y1, x2, y2, x1 = y1*4, x2*4, y2*4, x1*4 # We have scaled down to 0.25, so all location coordinates times 4 is needed
             cv2.rectangle(img,(x1,y1),(x2,y2),(0,0,255),2)
             cv2.rectangle(img,(x1,y2-35),(x2,y2),(0,0,255),cv2.FILLED)
-            cv2.putText(img,name,(x1, y2-6),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,255),2)
+            cv2.putText(img,f'{name} {similarity:.1f}%',(x1, y2-6),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,255),2)
             markAttendance(name)
 
     cv2.imshow('webcam', img)
