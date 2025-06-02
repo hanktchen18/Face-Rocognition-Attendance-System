@@ -1,7 +1,7 @@
 # Face-Rocognition-Attendance-System
 
 A Python-based real-time facial recognition that marks attendance using a webcam.
-![face_recognition_video](https://github.com/user-attachments/assets/9fd3d01c-15c6-4728-a54e-9d39842877b5)
+![face_recognition_video](https://github.com/hanktchen18/Face-Rocognition-Attendance-System.git)
 
 ## Requirements
 
